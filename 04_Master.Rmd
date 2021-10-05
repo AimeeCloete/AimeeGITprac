@@ -34,7 +34,7 @@ Q1: This plot suggests that Fynbos greenness (NDVI) as observed from satellite s
 
 >*Answer 1:*
 
-<br>
+<br> *Post-fire, plants will have lots of range in which to grow and thus will grow faster immediately after the fire. At a certain point density dependent processes will limit growth which in turn will limit NDVI.* 
 
 ### 2. Fit models using Non-linear Least Squares (NLS)
 
@@ -101,7 +101,7 @@ Q2: How do the estimates for the common parameters compare?
 
 >*Answer 2:*
 
-<br>
+<br> *The simple model has a higher alpha value, lower gamma value and higher lambda value than the full (more complex) model*
 
 ### 3. Compare NLS models using ANOVA
 
@@ -119,11 +119,13 @@ Q3: Which model is better?
 
 >*Answer 3:*
 
+<br> *The full model is better because it has a lower residual sum of squares, therefore fits the data better than the simple model.*
+
 Q4: How many degrees of freedom are there in this ANOVA and why (i.e. what are they)?
 
 >*Answer 4:*
 
-<br>
+<br> *There are 2 degrees of freedom in this ANOVA, this is the difference between the number of paramters between the models. This is 2 because the full model has 2 more (additional) parameters which have been added that are not in the simple model. The parameters are "A" and "phi".*
 
 ### 4. Fit models using Maximum Likelihood Estimation (MLE)
 
@@ -216,7 +218,7 @@ Q5: Is there a preferred model and if so, which one?
 
 >*Answer 5:*
 
-<br>
+<br> *There is a preferred model: The full model is preferred because the AIC value is lower than the AIC of the simple model with a difference more than 3 so the difference is significant at the 5% threshold.*
 
 The nice thing about AIC is that the models you compare do not have to be nested like they do for ANOVA, as long as the data are the same. There are a few other constraints however... 
 
@@ -234,4 +236,4 @@ Q6: Why is it not okay to compare the AIC of these NLS models with the AIC of th
 
 >*Answer 6:*
 
-<br>
+<br> *The AIC function is used to compare models fitted by maximum likelihood to the same data.  Therefore we compare the AIC values of the NLS models and AIC values of the MLE models because the AIC values are calculated differently so they are not of the same range and unable to be compared.*
